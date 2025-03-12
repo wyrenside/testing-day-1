@@ -12,20 +12,52 @@
 //Console.WriteLine(max);
 //#endregion
 
-#region
-int a = int.Parse(Console.ReadLine());
+//#region
+//int a = int.Parse(Console.ReadLine());
 
-while (a % 2 == 0)
-{
-    a /= 2;
-}
+//while (a % 2 == 0)
+//{
+//    a /= 2;
+//}
 
-if (a == 1)
+//if (a == 1)
+//{
+//    Console.WriteLine("the given number is power of 2");
+//}
+//else
+//{
+//    Console.WriteLine("The given number is not power of 2");
+//}
+//#endregion
+
+int[] numbers = new int[10];
+int compositeCount = 0;
+int count = 0;
+
+Console.WriteLine("Insert Array:");
+
+for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine("the given number is power of 2");
+    numbers[i] = int.Parse(Console.ReadLine());
 }
-else
+for (int i = 0; i < numbers.Length; i++)
 {
-    Console.WriteLine("The given number is not power of 2");
+    int num = numbers[i];
+    int divider = 0;
+
+    if (num > 1)
+    {
+        for (int j = 2; j < num; j++)
+        {
+            if (num % j == 0)
+            {
+                divider++;
+            }
+        }
+        if (divider > 0)
+        {
+            count++;
+        }
+    }
 }
-#endregion
+Console.WriteLine("The number of composite numbers:" + (count));
