@@ -30,11 +30,39 @@
 //}
 //#endregion
 
-int[] numbers = new int[10];
-int compositeCount = 0;
-int count = 0;
+//int[] numbers = new int[10];
+//int compositeCount = 0;
+//int count = 0;
 
-Console.WriteLine("Insert Array:");
+//Console.WriteLine("Insert Array:");
+
+//for (int i = 0; i < numbers.Length; i++)
+//{
+//    numbers[i] = int.Parse(Console.ReadLine());
+//}
+//for (int i = 0; i < numbers.Length; i++)
+//{
+//    int num = numbers[i];
+//    int divider = 0;
+
+//    if (num > 1)
+//    {
+//        for (int j = 2; j < num; j++)
+//        {
+//            if (num % j == 0)
+//            {
+//                divider++;
+//            }
+//        }
+//        if (divider > 0)
+//        {
+//            count++;
+//        }
+//    }
+//}
+//Console.WriteLine("The number of composite numbers:" + (count));
+
+int[] numbers = new int[10];
 
 for (int i = 0; i < numbers.Length; i++)
 {
@@ -42,22 +70,8 @@ for (int i = 0; i < numbers.Length; i++)
 }
 for (int i = 0; i < numbers.Length; i++)
 {
-    int num = numbers[i];
-    int divider = 0;
-
-    if (num > 1)
+    if ((numbers[i] % 2 != 0) && (numbers[i] % 3 == 0))
     {
-        for (int j = 2; j < num; j++)
-        {
-            if (num % j == 0)
-            {
-                divider++;
-            }
-        }
-        if (divider > 0)
-        {
-            count++;
-        }
+        Console.WriteLine(numbers[i]);
     }
 }
-Console.WriteLine("The number of composite numbers:" + (count));
